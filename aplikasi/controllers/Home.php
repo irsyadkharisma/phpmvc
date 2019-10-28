@@ -2,7 +2,7 @@
 
 class Home {
     public function index(){
-        echo "bajingan";
+        $this->view('home/index');
     }
 }
 

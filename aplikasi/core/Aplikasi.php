@@ -34,6 +34,8 @@ class Aplikasi { //#membuat class aplikasi
             $this->params = array_values($url);
             
         }
+            // jalankan controller yang dimaksud, jika parameternya ada, 
+            call_user_func_array([$this->controller, $this->method], $this->params);
 
     }
 
