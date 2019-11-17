@@ -7,6 +7,7 @@ class Students extends Controller {
         // buat lempar array
         $data['title']= 'Daftar Mahasiswa';
         $data['students'] = $this->model('Student_model')->getAllStudents();
+        $this->view('templates/session');
         $this->view('templates/header');
         $this->view('students/index', $data);
         $this->view('templates/footer');
@@ -20,5 +21,5 @@ class Students extends Controller {
         $this->view('templates/footer');
     }
 
-   
+
 }
