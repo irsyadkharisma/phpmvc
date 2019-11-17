@@ -27,6 +27,7 @@ class Application {
             $this->controller = $url[0]; //controller di protected ditimpa dengan yang ini.
             unset($url[0]); 
             
+            
         }
         // controller : jika matched di atas, maka file yang dimaksud dipanggil sekali ajah
         require_once '../application/controllers/' . $this->controller . '.php';
@@ -57,7 +58,7 @@ class Application {
             $url = filter_var($url, FILTER_SANITIZE_URL); //membersihkan url dari karakter aneh-aneh, biar secure
             $url = explode('/', $url);
             return $url;
-
+            var_dump($url);
         
         }
     }
