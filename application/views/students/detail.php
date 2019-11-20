@@ -25,12 +25,6 @@
                 <td>:</td>
                 <td><?=$data['students']['major'];?></td>
             </tr>
-
-            <tr>
-                <td scope="row"><strong>Passwd</strong></td>
-                <td>:</td>
-                <td><?=$data['users']['nim'];?></td>
-            </tr>
         </tbody>
 </table>
 </div>

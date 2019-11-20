@@ -20,6 +20,7 @@ class Students extends Controller
     {
         $data['title'] = 'Detail';
         $data['students'] = $this->model('Student_model')->getStudent($nim);
+        $this->view('templates/session');
         $this->view('templates/header');
         $this->view('students/detail', $data);
         $this->view('templates/footer');
