@@ -1,10 +1,17 @@
+<?php
+
+// if ($this->view('students/index')) {
+//     require 'session.php';
+// }
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta http-equiv="Refresh" content="2;url=http://localhost/mvcfinal/main/students" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="http://localhost/mvcfinal/main/css/bootstrap.css">
     <title>Hello, world!</title>

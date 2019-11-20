@@ -91,6 +91,12 @@ class Database {
             return $this->stmt->rowCount();
         }
 
+        //function untuk cek session login
+        public function cek_session(){
+            $this->execute();
+            return $this->stmt->fetch(PDO::FETCH_ASSOC);
+        }
+
     }
     
 
