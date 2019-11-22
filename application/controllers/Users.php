@@ -98,15 +98,14 @@ class Users extends Controller
         if ($this->model('User_model')->addUser($_POST) > 0) {
             // echo "data berhasil dihapus";
             echo "berhasil";
-            // header('Location:' . BASEURL . '/students');
-            // exit;
+            header("refresh:2;url= http://localhost/mvcfinal/main/students");
+            exit;
         } else {
             echo "gagal";
-            echo $data['password'];
-            echo $data['password2'];
-            // Flasher::setFlash('Gagal', 'Daftar', 'danger');
-            // header('Location:' . BASEURL . '/students');
-            // exit;
+
+            Flasher::setFlash('Gagal', 'Daftar', 'danger');
+            header('Location:' . BASEURL . '/students');
+            exit;
         }
 
     }

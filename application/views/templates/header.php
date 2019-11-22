@@ -64,7 +64,7 @@
           <form  action="<?=BASEURL;?>/users/authUser" method="POST">
           <div class="form-group">
             <label for="nim">NIM</label>
-            <input type="text" class="form-control" id="nim" name="nim" aria-describedby="nimHelp" placeholder="Input NIM" required>
+            <input type="integer" class="form-control" id="nim" name="nim" aria-describedby="nimHelp" placeholder="Input NIM" required>
             <small id="nimHelp" class="form-text text-muted">Please enter designated NIM.</small>
           </div>
 
@@ -111,7 +111,7 @@
 
                         <div class="form-group">
                             <label for="NIM">NIM</label>
-                            <input type="text" class="form-control" id="nimadd" name="nimadd" placeholder="Isikan NIM" required>
+                            <input type="integer" class="form-control" id="nimadd" name="nimadd" placeholder="Isikan NIM" required>
                         </div>
 
                         <div class="form-group">
