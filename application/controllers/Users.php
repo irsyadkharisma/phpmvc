@@ -69,8 +69,11 @@ class Users extends Controller
                 header("refresh:2; url= http://localhost/mvcfinal/main/students");
                 exit;
             }
+
         } else {
             echo "user is not found";
+            header("refresh:2; url= http://localhost/mvcfinal/main/students");
+            exit;
         }
     }
 
@@ -94,14 +97,16 @@ class Users extends Controller
 
         if ($this->model('User_model')->addUser($_POST) > 0) {
             // echo "data berhasil dihapus";
-            Flasher::setFlash('Berhasil', 'Daftar', 'success');
-            header('Location:' . BASEURL . '/students');
-            exit;
+            echo "berhasil";
+            // header('Location:' . BASEURL . '/students');
+            // exit;
         } else {
-            // echo "data berhasil dihapus";
-            Flasher::setFlash('Gagal', 'Daftar', 'danger');
-            header('Location:' . BASEURL . '/students');
-            exit;
+            echo "gagal";
+            echo $data['password'];
+            echo $data['password2'];
+            // Flasher::setFlash('Gagal', 'Daftar', 'danger');
+            // header('Location:' . BASEURL . '/students');
+            // exit;
         }
 
     }
