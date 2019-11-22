@@ -17,7 +17,8 @@ if (isset($_POST["login"])) {
         if (password_verify($password, $baris["password"])) {
             // set session
             $_SESSION["login"] = true;
-            header("Location: http://localhost/mvcfinal/main/students");
+            header("Location: http://localhost/mvcfinal/users/success");
+
         }
     }
     echo "gagal";

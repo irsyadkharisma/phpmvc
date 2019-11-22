@@ -1,7 +1,6 @@
 <div class="container mt-3">
   <h3>Detail Mahasiswa : <?=$data['students']['nim'];?></h3>
-<div class="row">
-
+<div class="row " style="margin-bottom:25px">
 <div class="col-md-4">
 <img src="https://via.placeholder.com/300/09f/fff.png" alt="Propic">
 </div>
@@ -23,17 +22,19 @@
             <tr>
                 <td scope="row"><strong>Department</strong></td>
                 <td>:</td>
-                <td><?=$data['students']['major'];?></td>
+                <td><?=$data['students']['department'];?></td>
             </tr>
         </tbody>
+
 </table>
 </div>
 </div>
 
-  </div>
+<a href="<?=BASEURL;?>/students" class=" btn button btn-info btn-lg" role="button">Kembali</a>
+<a href="" class="btn button btn-warning btn-lg ml-1 showModalUpdate" data-toggle="modal" data-target="#addStudentModal" data-id="<?=$data['students']['nim'];?>">Update</a>
+
+
+
+</div>
 </div>
 
-<div class="container pt-3">
-<a href="<?=BASEURL;?>/students" class="button btn-warning btn-lg" role="button">Kembali</a>
-
-</div>
