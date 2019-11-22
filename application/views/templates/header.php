@@ -26,7 +26,14 @@
       </li>
       <li class="nav-item">
         <?php if (isset($_SESSION['login'])) {
+    echo "<li class='nav-item'>";
     echo "<a class='nav-link' href=" . BASEURL . "/students>Students</a>";
+    echo "</li>";
+
+    echo "<li class='nav-item'>";
+    echo "<a class='nav-link' href=" . BASEURL . "/users/index>Users List</a>";
+    echo "</li>";
+
 }
 ?>
 

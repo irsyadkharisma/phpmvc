@@ -19,6 +19,20 @@ class User_model
     //     return $this->db->resultSet();
     // }
 
+    public function getAllUsers()
+    {
+        $this->db->query('SELECT * FROM ' . $this->table);
+        return $this->db->resultSet();
+    }
+
+    public function getUser($nim)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE nim=:nim');
+        // pakai id=:id adalah metode binding, agar tidak kena sql injection
+        $this->db->bind('nim', $nim);
+        return $this->db->single();
+    }
+
     public function authUser($nim)
     {
         $this->db->query('SELECT * FROM ' . $this->table . ' WHERE nim=:nim');
@@ -37,7 +51,6 @@ class User_model
             // masukan query add student dulu
             $query = 'INSERT INTO ' . $this->table . ' VALUES (:id, :nim, :password, :cookie, :is_active)';
             $this->db->query($query);
-
             $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
             // lalu bind masing-masing values di dalamnya,
             // contoh $this->db->bind('nim), $data['nim'];

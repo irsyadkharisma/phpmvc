@@ -5,8 +5,9 @@ class Users extends Controller
 
     public function index()
     {
+        $data['users'] = $this->model('User_model')->getAllUsers();
         $this->view('templates/header');
-        $this->view('home/index');
+        $this->view('users/index', $data);
         $this->view('templates/footer');
 
     }
@@ -108,6 +109,16 @@ class Users extends Controller
             exit;
         }
 
+    }
+
+    public function detail($nim)
+    {
+        $data['title'] = 'Detail';
+        $data['users'] = $this->model('User_model')->getUser($nim);
+        $this->view('templates/session');
+        $this->view('templates/header');
+        $this->view('users/detail', $data);
+        $this->view('templates/footer');
     }
 
 }
