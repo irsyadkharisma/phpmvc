@@ -37,7 +37,7 @@ if ($user['is_active'] == 1) {
         <td>
             <a href="<?=BASEURL;?>/users/detail/<?=$user['nim']?>"><button type="button" name="detail" id="view" class="btn btn-primary" btn-lg btn-block">Detail</button></a>
             <a href="" class="btn btn-warning float-right ml-1 showModalUpdate" data-toggle="modal" data-target="#addStudentModal" data-id="<?=$user['nim']?>">Update</a>
-            <a href="<?=BASEURL;?>/users/delete/<?=$user['nim']?>"><button type="button" name="delete" id="delete" class="btn btn-danger" btn-lg btn-block">Delete</button></a>
+            <a href="<?=BASEURL;?>/users/delete/<?=$user['nim']?>"><button type="button" name="delete" id="delete" class="btn btn-danger buttonhapus" btn-lg btn-block">Delete</button></a>
 
         </td>
         </tr>

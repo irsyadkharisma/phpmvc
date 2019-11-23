@@ -32,7 +32,7 @@
         <td>
             <a href="<?=BASEURL;?>/students/detail/<?=$student['nim']?>"><button type="button" name="detail" id="view" class="btn btn-primary" btn-lg btn-block">Detail</button></a>
             <a href="" class="btn btn-warning float-right ml-1 showModalUpdate" data-toggle="modal" data-target="#addStudentModal" data-id="<?=$student['nim']?>">Update</a>
-            <a href="<?=BASEURL;?>/students/delete/<?=$student['nim']?>"><button type="button" name="delete" id="delete" class="btn btn-danger" btn-lg btn-block">Delete</button></a>
+            <a href="<?=BASEURL;?>/students/delete/<?=$student['nim']?>" class="buttonhapus btn btn-danger float-right ml-1"name="delete" id="delete">Delete</a>
 
         </td>
         </tr>
